@@ -15,8 +15,8 @@ namespace Oxide.Plugins
         {
             Puts("Plugin de teste iniciado");
         }
-        
-        void OnPlayerRespawned(BasePlayer player)
+
+        object OnPlayerRespawned(BasePlayer player)
         {
             Puts("debug mask OnPlayerLanded");
 
