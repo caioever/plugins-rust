@@ -6,20 +6,18 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("Test", "caio.barcelos", 0.1)]
-    [Description("Primeiro plugin de teste")]
-    class Test : RustPlugin
+    [Info("StartWithStuff", "caio.barcelos", 1.0.1)]
+    [Description("These plugin allow your player start with itens")]
+    class StartWithStuff : RustPlugin
     {
         // Init
         void Init()
         {
-            Puts("Plugin de teste iniciado");
+            Puts("Plugin start succefuly");
         }
 
         void OnPlayerRespawned(BasePlayer player)
         {
-            Puts("debug mask OnPlayerLanded");
-
             GivePlayerGift(player, "smg.mp5");
         }
 
