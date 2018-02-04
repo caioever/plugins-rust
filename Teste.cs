@@ -16,7 +16,7 @@ namespace Oxide.Plugins
             Puts("Plugin de teste iniciado");
         }
 
-        object OnPlayerRespawned(BasePlayer player)
+        void OnPlayerRespawned(BasePlayer player)
         {
             Puts("debug mask OnPlayerLanded");
 
@@ -26,6 +26,7 @@ namespace Oxide.Plugins
         object OnPlayerSpawn(BasePlayer player)
         {
             GivePlayerGift(player, "smg.mp5");
+            return player;
         }
 
         void GivePlayerGift(BasePlayer player, string gift)
