@@ -15,10 +15,16 @@ namespace Oxide.Plugins
         {
             Puts("Plugin de teste iniciado");
         }
-        void OnPlayerLanded(BasePlayer player, float num)
+        
+        void OnPlayerRespawned(BasePlayer player)
         {
             Puts("debug mask OnPlayerLanded");
 
+            GivePlayerGift(player, "smg.mp5");
+        }
+
+        object OnPlayerSpawn(BasePlayer player)
+        {
             GivePlayerGift(player, "smg.mp5");
         }
 
